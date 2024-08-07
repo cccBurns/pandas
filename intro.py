@@ -24,4 +24,10 @@ df2 = df2[["Edad", "Nacionalidad", "Nombre"]]
 nueva_fila = pd.DataFrame({'Nombre':'Daniela', 'Edad':29, 'Nacionalidad':'Colombiana'}, index = [4])
 df2 = pd.concat([df2, nueva_fila])
 
+# Cambiar nombre de columna de edad a años
+df2 = df2.rename(columns={'Edad':'Años'})
+
+# Columnas en MAYUSCULA
+df2.columns = df2.columns.str.upper()
+
 print(df2)
