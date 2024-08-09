@@ -11,18 +11,18 @@ df = pd.DataFrame(data)
 print(df)
 
 # El metodo apply le aplica una funcion a una columna del DF, en este caso a la columna Edad
-#df['edad'] = df['edad'].apply(lambda x: x + 5)
-#print(df)
+df['edad'] = df['edad'].apply(lambda x: x + 5)
+print(df)
 
 # Pasar nombres a mayusculas
-#def convertir_a_mayusculas(x):
-#    return x.upper()
-#df['nombre'] = df['nombre'].apply(convertir_a_mayusculas)
-#print(df)
+def convertir_a_mayusculas(x):
+    return x.upper()
+df['nombre'] = df['nombre'].apply(convertir_a_mayusculas)
+print(df)
 
 # Imprime el promedio de la edad (.mean = pronmedio, .sum = suma, .max = maximo, .min = minimo,)
-#promedio_edad = df['edad'].mean()
-#print(promedio_edad)
+promedio_edad = df['edad'].mean()
+print(promedio_edad)
 
 # Reemplazar nombre, primero el elemento que quiero reemplazar y despues por el cual quiero que se reemplace
 df['nombre'] = df['nombre'].replace('Matias Fernandez', 'Jorge Valdivia')
@@ -39,3 +39,6 @@ print(df)
 # Separar una columna en dos
 df[['nombre', 'apellido']] = df['nombre'].str.split(' ', expand=True)
 print(df)
+
+
+

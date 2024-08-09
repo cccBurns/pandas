@@ -23,10 +23,10 @@ peliculas = peliculas.drop("Actor Principal", axis = 1)
 primeras_4 = peliculas.iloc[:, :4]
 
 # Imprimir las primeras 4 filas
-#print(primeras_4.columns)
+print(primeras_4.columns)
 
 # Seleccionar la primera fila de banco
-#print(banco.iloc[0])
+print(banco.iloc[0])
 
 peliculas_mayor_a_7 = peliculas[peliculas['vote_average'] > 7]
 print(peliculas_mayor_a_7['vote_average'])
