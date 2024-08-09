@@ -30,5 +30,5 @@ print(df)
 df['Ranking_Edad'] = df['Edad'].rank()
 print(df)
 
-#
+
 
